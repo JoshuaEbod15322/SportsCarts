@@ -1,0 +1,323 @@
+@import "tailwindcss";
+
+:root {
+  --nav-height: 64px;
+  --accent: #ff6b35;
+}
+
+/* Layout */
+html,
+body,
+#root {
+  height: 100%;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #0f172a;
+}
+
+/* Nav - Fixed */
+.nav {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Changed to space-between */
+  padding: 0 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+.nav .brand {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+.nav nav a {
+  color: #0f172a;
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+}
+.nav .login {
+  padding: 0.45rem 0.9rem;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  color: #111827;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.nav .login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--nav-height) - 80px);
+  padding: 2.5rem 1rem;
+  color: #fff;
+  overflow: hidden;
+  background-image: url("https://www.whoa.in/download/rain-hd-photoshoot-desktop-wallpaper");
+  background-size: cover;
+  background-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.65),
+    rgba(2, 6, 23, 0.45)
+  );
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+.hero h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+.lead {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  margin-bottom: 1.2rem;
+  color: #e6eef8;
+}
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.cta:hover {
+  filter: brightness(0.95);
+}
+
+/* About - Updated for larger cards */
+.about {
+  padding: 3rem 0;
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+}
+.about h2 {
+  font-size: 1.75rem;
+}
+.about p {
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* Brand Cards - Updated for larger size */
+.brand-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.brand-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.brand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(2, 6, 23, 0.1);
+  border-color: rgba(255, 107, 53, 0.2);
+}
+
+.brand-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.brand-card h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.brand-card p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: auto;
+  background: #c7c7c7;
+  padding: 1rem 1.25rem;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 0.95rem;
+}
+.footer-inner a {
+  color: inherit;
+}
+.social-icons a {
+  color: inherit;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+
+  /* Brand cards responsive */
+  .brand-cards {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav nav {
+    display: none;
+  }
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Brand cards mobile */
+  .brand-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .brand-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .brand-card img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-card img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Add these styles to your existing App.css */
+
+/* Modal animations */
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.modal-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 200ms, transform 200ms;
+}
+
+/* Form input focus styles */
+input:focus {
+  outline: none;
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Modal backdrop */
+.fixed.inset-0 {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal content animation */
+.bg-white.rounded-xl {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Social buttons hover */
+button:hover svg {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .max-w-md {
+    margin: 1rem;
+  }
+}
