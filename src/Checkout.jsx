@@ -615,7 +615,7 @@ const Checkout = () => {
                         name="name"
                         value={cardDetails.name}
                         onChange={handleCardDetailsChange}
-                        placeholder="John Doe"
+                        placeholder="Your name"
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
@@ -628,7 +628,7 @@ const Checkout = () => {
                         name="cardNumber"
                         value={cardDetails.cardNumber}
                         onChange={handleCardDetailsChange}
-                        placeholder="4242 4242 4242 4242"
+                        placeholder="You card number"
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
