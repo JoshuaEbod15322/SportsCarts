@@ -130,7 +130,7 @@ function Home() {
             <div className="border-b border-gray-200/50 px-6 py-4 bg-gradient-to-r from-white/80 to-white/60">
               <div className="flex justify-between items-center">
                 <h2 className="text-2xl font-bold text-gray-800">
-                  {isLoginMode ? "Welcome Back" : "Create Account"}
+                  {isLoginMode ? "Sign in" : "Create Account"}
                 </h2>
                 <button
                   onClick={closeAuthModal}
