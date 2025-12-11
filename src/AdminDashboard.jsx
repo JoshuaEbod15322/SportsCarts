@@ -782,7 +782,7 @@ const AdminDashboard = () => {
                               Order ID
                             </th>
                             <th className="text-left p-3 sm:p-4 font-semibold text-gray-700 text-sm sm:text-base">
-                              Customer Name
+                              Customer
                             </th>
                             <th className="text-left p-3 sm:p-4 font-semibold text-gray-700 text-sm sm:text-base">
                               Date
