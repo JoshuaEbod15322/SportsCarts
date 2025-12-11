@@ -328,7 +328,7 @@ function Home() {
         <div className="hero-overlay" />
         <div className="hero-content max-w-4xl mx-auto text-center px-6">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-            Sport Tumbler — Philippines
+            Drinks Carts — Philippines
           </h1>
           <p className="lead mt-4 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
             Durable. Leak-proof. Keeps drinks cold for 24 hours and hot for 12.
@@ -358,7 +358,7 @@ function Home() {
       <section id="about" className="about py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold mb-6">About SportTumbler PH</h2>
+            <h2 className="text-3xl font-bold mb-6">About </h2>
 
             <div className="space-y-6 text-gray-700">
               <p className="text-lg leading-relaxed">
