@@ -974,20 +974,6 @@ const AccountPage = () => {
                           )}
                         </div>
                       </div>
-
-                      {/* Cancellation Info (if cancellable) */}
-                      {isOrderCancellable(order) && (
-                        <div className="bg-yellow-50 border-t border-yellow-200 p-3">
-                          <div className="flex items-start gap-2">
-                            <AlertCircle className="w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0" />
-                            <p className="text-sm text-yellow-700">
-                              You can cancel this order until it's delivered.
-                              Cancelling will restore the products to stock and
-                              may be subject to cancellation fees.
-                            </p>
-                          </div>
-                        </div>
-                      )}
                     </div>
                   ))}
                 </div>

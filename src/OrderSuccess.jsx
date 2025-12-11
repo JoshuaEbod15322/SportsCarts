@@ -100,20 +100,6 @@ const OrderSuccess = () => {
             View Orders
           </Link>
         </div>
-
-        <div className="mt-8 pt-6 border-t border-gray-200">
-          <h3 className="font-semibold text-gray-900 mb-3">What's Next?</h3>
-          <div className="space-y-2 text-sm text-gray-600">
-            <div>1. You'll receive an order confirmation email shortly</div>
-            <div>2. We'll process and ship your order within 24 hours</div>
-            <div>3. You can track your order in your account page</div>
-            {paymentMethod === "Credit Card" && (
-              <div className="text-green-600 font-medium">
-                4. Payment successful! Your order is being processed.
-              </div>
-            )}
-          </div>
-        </div>
       </div>
     </div>
   );

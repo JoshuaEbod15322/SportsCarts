@@ -260,15 +260,10 @@ const Checkout = () => {
 
       // Process payment if using card
       if (paymentMethod === "card") {
-        try {
-          paymentResult = await processStripePayment();
-          if (!paymentResult.success) {
-            // Navigate to order failed page
-            navigate("/order-failed");
-            return;
-          }
-        } catch (error) {
-          // Payment error - navigate to failed page
+        paymentResult = await processStripePayment();
+
+        if (!paymentResult.success) {
+          // Navigate to order failed page
           navigate("/order-failed");
           return;
         }
@@ -346,7 +341,6 @@ const Checkout = () => {
     } catch (err) {
       console.error("Error placing order:", err);
       alert(err.message || "Failed to place order. Please try again.");
-    } finally {
       setProcessing(false);
     }
   };
@@ -660,6 +654,25 @@ const Checkout = () => {
                         />
                       </div>
                     </div>
+
+                    {/* Test Card Information for Development */}
+                    {(import.meta.env.VITE_APP_ENV === "development" ||
+                      import.meta.env.VITE_APP_ENV === "test") && (
+                      <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                        <p className="text-yellow-800 text-sm font-medium mb-1">
+                          Test Mode - Use this test card:
+                        </p>
+                        <p className="text-yellow-700 text-xs">
+                          Card Number: 4242 4242 4242 4242
+                        </p>
+                        <p className="text-yellow-700 text-xs">
+                          Expiry: Any future date (e.g., 12/30)
+                        </p>
+                        <p className="text-yellow-700 text-xs">
+                          CVC: Any 3 digits (e.g., 123)
+                        </p>
+                      </div>
+                    )}
                   </div>
                 )}
 
