@@ -142,7 +142,7 @@ function Home() {
               <p className="text-gray-600 mt-1">
                 {isLoginMode
                   ? "Sign in to your account to continue shopping"
-                  : "Join SportTumbler PH for exclusive offers"}
+                  : "Join Drinks Carts for exclusive offers"}
               </p>
             </div>
 
