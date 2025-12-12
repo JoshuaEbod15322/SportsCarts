@@ -582,7 +582,7 @@ const Checkout = () => {
                       </div>
                       <div>
                         <div className="font-medium text-gray-900">
-                          Credit Card (Stripe)
+                          Credit Card
                         </div>
                         <div className="text-sm text-gray-500">
                           Pay securely with your card
@@ -676,7 +676,7 @@ const Checkout = () => {
                   </div>
                 )}
 
-                <div className="bg-gray-50 rounded-lg p-4">
+                {/* <div className="bg-gray-50 rounded-lg p-4">
                   <div className="flex items-center gap-2 text-gray-600 mb-2">
                     <Shield className="w-4 h-4" />
                     <span className="text-sm">Secure Transaction</span>
@@ -686,7 +686,7 @@ const Checkout = () => {
                     through Stripe's secure payment system.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <button
